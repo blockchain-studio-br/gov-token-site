@@ -79,10 +79,17 @@ gulp.task('useref', function () {
 var imagemin = require('gulp-imagemin');
 
 gulp.task('images', function () {
-  return gulp.src('app/assets/img/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('app/assets/images/**/*.+(png|jpg|gif|svg)')
     // Caching images that ran through imagemin
     .pipe(cache(imagemin()))
-    .pipe(gulp.dest('dist/assets/img'))
+    .pipe(gulp.dest('dist/assets/images'))
+});
+
+gulp.task('logos', function () {
+  return gulp.src('app/assets/logos/**/*.+(png|jpg|gif|svg)')
+    // Caching images that ran through imagemin
+    .pipe(cache(imagemin()))
+    .pipe(gulp.dest('dist/assets/logos'))
 });
 
 // Other
