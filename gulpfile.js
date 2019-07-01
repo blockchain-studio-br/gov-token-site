@@ -138,7 +138,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['less', 'useref', 'images', 'fonts', 'ico', 'plugins', 'bootstrap', 'php', 'pdf', 'css', 'js'],
+    ['less', 'useref', 'images', 'fonts', 'ico', 'plugins', 'bootstrap', 'php', 'pdf', 'css', 'js', 'logos'],
     callback);
 });
 
